@@ -15,5 +15,5 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Root duplicate (app runs from src/App.jsx)
-App.jsx
+# Root duplicate only (app runs from src/App.jsx)
+/App.jsx
