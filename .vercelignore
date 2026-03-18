@@ -1,0 +1,19 @@
+# Dependencies (Vercel installs fresh)
+node_modules
+
+# Git
+.git
+
+# Local env and logs
+.env*.local
+*.log
+npm-debug.log*
+
+# IDE and OS
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Root duplicate (app runs from src/App.jsx)
+App.jsx
