@@ -34,44 +34,44 @@ export default function App() {
 
   const events = [
     {
-      id: 2,
+      id: 1,
       title: "આભાર સ્તુતિ",
       date: "7 મે, 2026",
       time: "સાંજે 4:00 કલાકે",
-      icon: <Star className="w-6 h-6 text-white" />,
-      description: "ઈશ્વર પિતાનો આભાર માનવા માટે વિશેષ પ્રાર્થના સભા."
+      description: "ઈશ્વર પિતાનો આભાર માનવા માટે વિશેષ પ્રાર્થના સભા.",
+      image: "https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?w=600&h=320&fit=crop"
     },
     {
-      id: 5,
+      id: 2,
       title: "ગામના માંડવા",
       date: "7 મે, 2026",
       time: "સાંજે 6:00 કલાકે",
-      icon: <Users className="w-6 h-6 text-white" />,
-      description: "ગામના રીતિ-રિવાજ મુજબ માંડવા મુહૂર્ત અને પ્રીતિભોજન."
+      description: "ગામના રીતિ-રિવાજ મુજબ માંડવા મુહૂર્ત અને પ્રીતિભોજન.",
+      image: "https://images.unsplash.com/photo-1744891471118-f74c0453cd21?w=600&h=320&fit=crop"
     },
     {
       id: 3,
       title: "મહેમાનોનું સ્વાગત",
       date: "8 મે, 2026",
       time: "સવારે 10:00 કલાકે",
-      icon: <Heart className="w-6 h-6 text-white" />,
-      description: "દૂર-સૂદૂરથી પધારેલા વ્હાલા મહેમાનોનું ભાવભીનું સ્વાગત."
+      description: "દૂર-સૂદૂરથી પધારેલા વ્હાલા મહેમાનોનું ભાવભીનું સ્વાગત.",
+      image: "https://images.unsplash.com/photo-1773020933590-6928ed151150?w=600&h=320&fit=crop"
     },
     {
       id: 4,
       title: "રાસ ગરબા",
       date: "9 મે, 2026",
       time: "સાંજે 5:00 કલાકે",
-      icon: <Music className="w-6 h-6 text-white" />,
-      description: "પરંપરાગત રાસ-ગરબાની ઉત્સાહી ઉજવણી."
+      description: "પરંપરાગત રાસ-ગરબાની ઉત્સાહી ઉજવણી.",
+      image: "https://images.unsplash.com/photo-1655462100517-7d65e7ece006?w=600&h=320&fit=crop"
     },
     {
       id: 5,
       title: "લગ્ન વિધિ",
       date: "11 મે, 2026",
       time: "બપોરે 12:00 કલાકે",
-      icon: <Clock className="w-6 h-6 text-white" />,
-      description: "C.N.I સંત યાકુબ ચર્ચ ખાતે પવિત્ર લગ્ન સંસ્કાર વિધિ."
+      description: "C.N.I સંત યાકુબ ચર્ચ ખાતે પવિત્ર લગ્ન સંસ્કાર વિધિ.",
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=320&fit=crop"
     }
   ];
 
@@ -214,24 +214,36 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, idx) => (
-              <div key={idx} className="group glass-card p-8 rounded-[40px] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-500 border-white/80">
-                <div className="w-16 h-16 rounded-2xl bg-[#9CA986] flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                  {event.icon}
-                </div>
-                <h3 className="font-serif-gujarati text-2xl text-[#4A4A4A] font-bold mb-4">{event.title}</h3>
-                <div className="space-y-3 font-sans-gujarati text-[#7D7D7D]">
-                  <div className="flex items-center gap-3">
-                    <Calendar className="w-4 h-4 text-[#E89F95]" />
-                    <span className="font-semibold text-[#4A4A4A]">{event.date}</span>
+              <div key={idx} className="group glass-card overflow-hidden rounded-[40px] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-500 border-white/80">
+                {event.image && (
+                  <div className="relative h-44 overflow-hidden rounded-t-[32px]">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <span className="font-serif-gujarati text-white text-xl md:text-2xl font-bold drop-shadow-md">{event.title}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-4 h-4 text-[#9CA986]" />
-                    <span>{event.time}</span>
+                )}
+                <div className="p-8">
+                  {!event.image && <h3 className="font-serif-gujarati text-3xl md:text-4xl text-[#4A4A4A] font-bold mb-6">{event.title}</h3>}
+                  <div className="space-y-3 font-sans-gujarati text-[#7D7D7D] text-lg md:text-xl">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="w-5 h-5 text-[#E89F95] shrink-0" />
+                      <span className="font-semibold text-[#4A4A4A]">{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="w-5 h-5 text-[#9CA986] shrink-0" />
+                      <span>{event.time}</span>
+                    </div>
                   </div>
+                  <p className="mt-6 pt-6 border-t border-[#E5E0D8] text-[#666666] font-sans-gujarati leading-relaxed text-lg md:text-xl">
+                    {event.description}
+                  </p>
                 </div>
-                <p className="mt-6 pt-6 border-t border-[#E5E0D8] text-[#666666] font-sans-gujarati leading-relaxed">
-                  {event.description}
-                </p>
               </div>
             ))}
           </div>
