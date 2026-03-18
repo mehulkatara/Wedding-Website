@@ -34,7 +34,7 @@ export default function App() {
 
   const events = [
     {
-      id: 1,
+      id: 2,
       title: "આભાર સ્તુતિ",
       date: "7 મે, 2026",
       time: "સાંજે 4:00 કલાકે",
@@ -42,7 +42,7 @@ export default function App() {
       description: "ઈશ્વર પિતાનો આભાર માનવા માટે વિશેષ પ્રાર્થના સભા."
     },
     {
-      id: 2,
+      id: 5,
       title: "ગામના માંડવા",
       date: "7 મે, 2026",
       time: "સાંજે 6:00 કલાકે",
@@ -59,11 +59,11 @@ export default function App() {
     },
     {
       id: 4,
-      title: "પીઠી અને સંગીત",
+      title: "રાસ ગરબા",
       date: "9 મે, 2026",
       time: "સાંજે 5:00 કલાકે",
       icon: <Music className="w-6 h-6 text-white" />,
-      description: "પીઠીની પવિત્ર વિધિ અને ત્યારબાદ રાસ-ગરબાની રમઝટ."
+      description: "પરંપરાગત રાસ-ગરબાની ઉત્સાહી ઉજવણી."
     },
     {
       id: 5,
@@ -85,6 +85,23 @@ export default function App() {
       side: "કન્યા પક્ષ (વાઘપુર)",
       parents: "શ્રીમતી વોલેન્ટિનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત",
       phone: "+91 98765 43211"
+    }
+  ];
+
+  const homeLocations = [
+    {
+      title: "વરનું ઘર",
+      subtitle: "લુસડિયા",
+      address: "લુસડિયા, સાબરકાંઠા, ગુજરાત",
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117565.41926618776!2d73.05!3d23.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4d29193108c9%3A0x6436bd3e55df583b!2sGujarat!5e0!3m2!1sen!2sin!4v1705646194723!5m2!1sen!2sin",
+      mapsLink: "https://www.google.com/maps/search/Lusadiya+Sabarkantha+Gujarat"
+    },
+    {
+      title: "કન્યાનું ઘર",
+      subtitle: "વાઘપુર",
+      address: "વાઘપુર, સાબરકાંઠા, ગુજરાત - ૩૮૩૦૦૧",
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117565.41926618776!2d72.93!3d22.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4d29193108c9%3A0x6436bd3e55df583b!2sGujarat!5e0!3m2!1sen!2sin!4v1705646194723!5m2!1sen!2sin",
+      mapsLink: "https://www.google.com/maps/search/Vagpur+Sabarkantha+Gujarat"
     }
   ];
 
@@ -128,18 +145,15 @@ export default function App() {
         <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}></div>
 
         <div className="z-10 text-center animate-fade-up w-full max-w-4xl">
-          <div className="inline-block px-4 py-1 border-b-2 border-[#9CA986] mb-8">
-            <p className="text-[#9CA986] tracking-[0.3em] uppercase text-xs md:text-sm font-bold">Wedding Invitation</p>
-          </div>
           
           <h1 className="font-serif-gujarati text-6xl md:text-8xl lg:text-9xl text-[#4A4A4A] mb-8 font-black leading-tight">
             રસીન <br className="md:hidden" />
-            <span className="text-4xl md:text-6xl text-[#E89F95] align-middle px-4">કે</span> 
+            <span className="text-4xl md:text-6xl text-[#E89F95] align-middle px-4"> સંગ </span> 
             સૃષ્ટિ
           </h1>
 
           <p className="text-lg md:text-2xl text-[#7D7D7D] mb-12 font-sans-gujarati max-w-2xl mx-auto leading-relaxed px-4">
-            સ્નેહના બંધને બંધાઈ અમે નવા જીવનની શરૂઆત કરી રહ્યા છીએ...
+          પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત કરી રહ્યા છીએ...
           </p>
 
           {/* Countdown Timer */}
@@ -168,7 +182,7 @@ export default function App() {
             <div className="w-16 h-[1px] bg-[#E5E0D8] self-center"></div>
           </div>
 
-          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">નવદંપતી ના આશીર્વાદ</h2>
+          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">પ્રભુના આશીર્વાદથી જોડાતી જીવનસફર</h2>
           
           <div className="font-sans-gujarati text-lg md:text-2xl leading-[2] text-[#666666] space-y-8 px-4">
             <p>
@@ -184,7 +198,8 @@ export default function App() {
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">સૃષ્ટિ</p>
             <p className="mt-12 pt-10 border-t border-[#F5F1EB]">
               તારીખ ૧૧-૫-૨૦૨૬, સોમવારના રોજ બપોરે ૧૨:૦૦ કલાકે <br className="hidden md:block"/>
-              નિરધાર્યા છે. આપના આગમન થી અમારો ઉત્સાહ વધશે.
+              પ્રભુની કૃપાથી લગ્ન સમારોહ યોજાયેલ છે.<br className="hidden md:block"/>
+              આપની ઉપસ્થિતિ અમને આનંદ અને આશીર્વાદ આપશે.
             </p>
           </div>
         </div>
@@ -194,8 +209,7 @@ export default function App() {
       <section className="py-24 px-4 bg-[#FDFBF7]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-[#9CA986] font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Schedule</span>
-            <h2 className="font-serif-gujarati text-4xl md:text-6xl text-[#4A4A4A] font-bold">માંગલિક પ્રસંગો</h2>
+            <h2 className="font-serif-gujarati text-4xl md:text-6xl text-[#4A4A4A] font-bold">આનંદના પ્રસંગો</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -259,6 +273,52 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Groom & Bride Home Locations */}
+      {homeLocations.map((loc, idx) => (
+        <section key={idx} className={`py-24 px-4 ${idx % 2 === 0 ? 'bg-[#FDFBF7]' : 'bg-white'}`}>
+          <div className="max-w-6xl mx-auto">
+            <div className={`flex flex-col lg:flex-row gap-16 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className="w-full lg:w-1/2">
+                <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-[#FDFBF7] h-[400px] md:h-[500px]">
+                  <iframe
+                    src={loc.mapEmbed}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    title={loc.title}
+                  />
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2 space-y-10">
+                <div className="inline-block p-4 bg-[#FDFBF7] rounded-3xl text-[#9CA986]">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <h2 className="font-serif-gujarati text-4xl md:text-5xl text-[#4A4A4A] font-bold">{loc.title}</h2>
+                <div className="space-y-6 font-sans-gujarati">
+                  <p className="text-2xl text-[#9CA986] font-bold">{loc.subtitle}</p>
+                  <p className="text-xl text-[#7D7D7D] leading-relaxed">
+                    {loc.address}
+                  </p>
+                  <div className="pt-8">
+                    <a
+                      href={loc.mapsLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-3 bg-[#4A4A4A] text-white px-10 py-5 rounded-full font-bold hover:bg-[#333333] transition-all hover:gap-5"
+                    >
+                      મેપ પર રસ્તો જુઓ
+                      <ArrowRight className="w-5 h-5 text-[#9CA986]" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
 
       {/* Family & Contact */}
       <section className="py-24 px-4 bg-[#FDFBF7]">
