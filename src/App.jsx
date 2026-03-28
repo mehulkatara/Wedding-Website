@@ -71,9 +71,18 @@ export default function App() {
       date: "11 મે, 2026",
       time: "બપોરે 12:00 કલાકે",
       description: "C.N.I સંત યાકુબ ચર્ચ ખાતે પવિત્ર લગ્ન સંસ્કાર વિધિ.",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=320&fit=crop"
+      image: "https://images.pexels.com/photos/32195688/pexels-photo-32195688.jpeg?cs=srgb&dl=pexels-lilen-diaz-1025474869-32195688.jpg&fm=jpg&w=600&h=320"
     }
   ];
+
+  const venue = {
+    image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/Screenshot%202026-03-26%20003825-Hh4u3ByrCQBCjxfuzhTkk1M5oGwltW.png",
+    titleOnImage: "C.N.I સંત યાકુબ ચર્ચ - વાઘપુર",
+    description: "ઈશ્વર સમક્ષ પવિત્ર લગ્ન વિધિ અહીં યોજાશે.",
+    mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&output=embed",
+    mapsLink:
+      "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!3m5!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"
+  };
 
   const families = [
     {
@@ -92,16 +101,18 @@ export default function App() {
     {
       title: "વરનું ઘર",
       subtitle: "લુસડિયા",
-      address: "લુસડિયા, સાબરકાંઠા, ગુજરાત",
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117565.41926618776!2d73.05!3d23.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4d29193108c9%3A0x6436bd3e55df583b!2sGujarat!5e0!3m2!1sen!2sin!4v1705646194723!5m2!1sen!2sin",
-      mapsLink: "https://www.google.com/maps/search/Lusadiya+Sabarkantha+Gujarat"
+      description: "વરનું પરિવાર અહીં નિવાસ કરે છે.",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=320&fit=crop",
+      mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&output=embed",
+      mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1MzUsOTQyODQ0ODEsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyNjI3MzMsMTAwNzk2MTg2QgJJTg%3D%3D&skid=969f89a4-0917-40f8-a0fb-0ba259923e7b&shorturl=1"
     },
     {
       title: "કન્યાનું ઘર",
       subtitle: "વાઘપુર",
-      address: "વાઘપુર, સાબરકાંઠા, ગુજરાત - ૩૮૩૦૦૧",
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117565.41926618776!2d72.93!3d22.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4d29193108c9%3A0x6436bd3e55df583b!2sGujarat!5e0!3m2!1sen!2sin!4v1705646194723!5m2!1sen!2sin",
-      mapsLink: "https://www.google.com/maps/search/Vagpur+Sabarkantha+Gujarat"
+      description: "કન્યાનું પરિવાર અહીં નિવાસ કરે છે.",
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=320&fit=crop",
+      mapEmbed: "https://www.google.com/maps?q=23.695391,73.4360701&z=17&output=embed",
+      mapsLink: "https://www.google.com/maps/place/23.666861,73.415263/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
     }
   ];
 
@@ -253,33 +264,46 @@ export default function App() {
       {/* Venue Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2 order-2 lg:order-1">
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-[#FDFBF7] h-[500px]">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117565.41926618776!2d72.9304191!3d22.9545934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4d29193108c9%3A0x6436bd3e55df583b!2sGujarat!5e0!3m2!1sen!2sin!4v1705646194723!5m2!1sen!2sin" 
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="Venue Map"
-                ></iframe>
+          <div className="text-center mb-20">
+            <h2 className="font-serif-gujarati text-4xl md:text-6xl text-[#4A4A4A] font-bold">લગ્ન સ્થળ</h2>
+          </div>
+          <div className="group glass-card overflow-hidden rounded-[40px] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-500 border-white/80 max-w-4xl mx-auto">
+            <div className="relative h-44 overflow-hidden rounded-t-[32px]">
+              <img
+                src={venue.image}
+                alt={venue.titleOnImage}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4">
+                <span className="font-serif-gujarati text-white text-xl md:text-2xl font-bold drop-shadow-md">
+                  {venue.titleOnImage}
+                </span>
               </div>
             </div>
-            
-            <div className="w-full lg:w-1/2 order-1 lg:order-2 space-y-10">
-              <div className="inline-block p-4 bg-[#FDFBF7] rounded-3xl text-[#9CA986]">
-                <MapPin className="w-8 h-8" />
+            <div className="p-8">
+                {venue.description}
+              <div className="rounded-[24px] overflow-hidden border-8 border-[#FDFBF7] h-[380px] md:h-[440px] mt-8">
+                <iframe
+                  src={venue.mapEmbed}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  title="લગ્ન સ્થળ નકશો"
+                />
               </div>
-              <h2 className="font-serif-gujarati text-4xl md:text-5xl text-[#4A4A4A] font-bold">લગ્ન સ્થળ</h2>
-              <div className="space-y-6 font-sans-gujarati">
-                <p className="text-2xl text-[#4A4A4A] font-bold">C.N.I સંત યાકુબ ચર્ચ</p>
-                <p className="text-xl text-[#7D7D7D] leading-relaxed">
-                  વાઘપુર, સાબરકાંઠા<br />ગુજરાત - ૩૮૩૦૦૧
-                </p>
-                <div className="pt-8">
-                  <a href="https://maps.google.com" target="_blank" rel="noreferrer" 
-                     className="inline-flex items-center gap-3 bg-[#4A4A4A] text-white px-10 py-5 rounded-full font-bold hover:bg-[#333333] transition-all hover:gap-5">
-                    મેપ પર રસ્તો જુઓ
-                    <ArrowRight className="w-5 h-5 text-[#9CA986]" />
-                  </a>
-                </div>
+              <div className="pt-8">
+                <a
+                  href={venue.mapsLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#4A4A4A] text-white px-10 py-5 rounded-full font-bold hover:bg-[#333333] transition-all hover:gap-5"
+                >
+                  મેપ પર રસ્તો જુઓ
+                  <ArrowRight className="w-5 h-5 text-[#9CA986]" />
+                </a>
               </div>
             </div>
           </div>
@@ -290,9 +314,26 @@ export default function App() {
       {homeLocations.map((loc, idx) => (
         <section key={idx} className={`py-24 px-4 ${idx % 2 === 0 ? 'bg-[#FDFBF7]' : 'bg-white'}`}>
           <div className="max-w-6xl mx-auto">
-            <div className={`flex flex-col lg:flex-row gap-16 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className="w-full lg:w-1/2">
-                <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-[#FDFBF7] h-[400px] md:h-[500px]">
+            <div className="text-center mb-20">
+              <h2 className="font-serif-gujarati text-4xl md:text-6xl text-[#4A4A4A] font-bold">{loc.title}</h2>
+            </div>
+            <div className="group glass-card overflow-hidden rounded-[40px] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-500 border-white/80 max-w-4xl mx-auto">
+              <div className="relative h-44 overflow-hidden rounded-t-[32px]">
+                <img
+                  src={loc.image}
+                  alt={loc.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4">
+                  <span className="font-serif-gujarati text-white text-xl md:text-2xl font-bold drop-shadow-md">
+                    {loc.subtitle}
+                  </span>
+                </div>
+              </div>
+              <div className="p-8">
+                  {loc.description}
+                <div className="rounded-[24px] overflow-hidden border-8 border-[#FDFBF7] h-[380px] md:h-[440px] mt-8">
                   <iframe
                     src={loc.mapEmbed}
                     width="100%"
@@ -303,28 +344,16 @@ export default function App() {
                     title={loc.title}
                   />
                 </div>
-              </div>
-              <div className="w-full lg:w-1/2 space-y-10">
-                <div className="inline-block p-4 bg-[#FDFBF7] rounded-3xl text-[#9CA986]">
-                  <MapPin className="w-8 h-8" />
-                </div>
-                <h2 className="font-serif-gujarati text-4xl md:text-5xl text-[#4A4A4A] font-bold">{loc.title}</h2>
-                <div className="space-y-6 font-sans-gujarati">
-                  <p className="text-2xl text-[#9CA986] font-bold">{loc.subtitle}</p>
-                  <p className="text-xl text-[#7D7D7D] leading-relaxed">
-                    {loc.address}
-                  </p>
-                  <div className="pt-8">
-                    <a
-                      href={loc.mapsLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-3 bg-[#4A4A4A] text-white px-10 py-5 rounded-full font-bold hover:bg-[#333333] transition-all hover:gap-5"
-                    >
-                      મેપ પર રસ્તો જુઓ
-                      <ArrowRight className="w-5 h-5 text-[#9CA986]" />
-                    </a>
-                  </div>
+                <div className="pt-8">
+                  <a
+                    href={loc.mapsLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-3 bg-[#4A4A4A] text-white px-10 py-5 rounded-full font-bold hover:bg-[#333333] transition-all hover:gap-5"
+                  >
+                    મેપ પર રસ્તો જુઓ
+                    <ArrowRight className="w-5 h-5 text-[#9CA986]" />
+                  </a>
                 </div>
               </div>
             </div>
