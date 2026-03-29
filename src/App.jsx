@@ -88,12 +88,14 @@ export default function App() {
     {
       side: "વર પક્ષ (લુસડિયા)",
       parents: "શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા",
-      phone: "+91 98765 43210"
+      phone: "+91 98765 43210",
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom_parents.webp"
     },
     {
       side: "કન્યા પક્ષ (વાઘપુર)",
       parents: "શ્રીમતી વોલેન્ટિનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત",
-      phone: "+91 98765 43211"
+      phone: "+91 98765 43211",
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_parents.webp"
     }
   ];
 
@@ -366,15 +368,29 @@ export default function App() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 mb-20">
             {families.map((family, idx) => (
-              <div key={idx} className="glass-card p-10 rounded-[40px] text-center border-white/60">
-                <p className="text-[#9CA986] font-black tracking-widest text-xs uppercase mb-6">{family.side}</p>
-                <h3 className="text-2xl font-serif-gujarati text-[#4A4A4A] font-bold mb-8 leading-snug">{family.parents}</h3>
-                <a href={`tel:${family.phone}`} className="inline-flex items-center gap-3 text-[#4A4A4A] font-bold hover:text-[#9CA986] transition-colors group">
-                  <div className="p-3 bg-white rounded-2xl shadow-sm group-hover:bg-[#9CA986] group-hover:text-white transition-all">
-                    <Phone className="w-5 h-5" />
+              <div key={idx} className="group glass-card overflow-hidden rounded-[40px] shadow-sm hover:shadow-xl transition-all duration-500 border-white/80">
+                {family.image && (
+                  <div className="relative h-48 overflow-hidden rounded-t-[32px]">
+                    <img
+                      src={family.image}
+                      alt={family.side}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <span className="font-serif-gujarati text-white text-xl md:text-2xl font-bold drop-shadow-md">{family.side}</span>
+                    </div>
                   </div>
-                  {family.phone}
-                </a>
+                )}
+                <div className="p-10 text-center">
+                  <h3 className="text-2xl font-serif-gujarati text-[#4A4A4A] font-bold mb-8 leading-snug">{family.parents}</h3>
+                  <a href={`tel:${family.phone}`} className="inline-flex items-center gap-3 text-[#4A4A4A] font-bold hover:text-[#9CA986] transition-colors group">
+                    <div className="p-3 bg-white rounded-2xl shadow-sm group-hover:bg-[#9CA986] group-hover:text-white transition-all">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    {family.phone}
+                  </a>
+                </div>
               </div>
             ))}
           </div>
