@@ -93,7 +93,7 @@ export default function App() {
     },
     {
       side: "કન્યા પક્ષ (વાઘપુર)",
-      parents: "શ્રીમતી વોલેન્ટિનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત",
+      parents: "શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત",
       phone: "+91 98765 43211",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_parents.webp"
     }
@@ -104,7 +104,7 @@ export default function App() {
       title: "વરનું ઘર",
       subtitle: "લુસડિયા",
       description: "વરનું પરિવાર અહીં નિવાસ કરે છે.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=320&fit=crop",
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom-home.webp",
       mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&output=embed",
       mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1MzUsOTQyODQ0ODEsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyNjI3MzMsMTAwNzk2MTg2QgJJTg%3D%3D&skid=969f89a4-0917-40f8-a0fb-0ba259923e7b&shorturl=1"
     },
@@ -117,6 +117,8 @@ export default function App() {
       mapsLink: "https://www.google.com/maps/place/23.666861,73.415263/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
     }
   ];
+
+  const couplePhoto = "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/couple-photo.webp";
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#4A4A4A] overflow-x-hidden font-sans selection:bg-[#E89F95] selection:text-white">
@@ -152,20 +154,29 @@ export default function App() {
       `}} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 hero-gradient overflow-hidden">
+      <section 
+        className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${couplePhoto}')`,
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
         {/* Decorative Floating Blobs */}
         <div className="absolute top-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-[#9CA986] rounded-full mix-blend-multiply filter blur-[80px] opacity-10 animate-float"></div>
         <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}></div>
 
         <div className="z-10 text-center animate-fade-up w-full max-w-4xl">
           
-          <h1 className="font-serif-gujarati text-6xl md:text-8xl lg:text-9xl text-[#4A4A4A] mb-8 font-black leading-tight">
+          <h1 className="font-serif-gujarati text-6xl md:text-8xl lg:text-9xl text-white mb-8 font-black leading-tight drop-shadow-2xl">
             રસીન <br className="md:hidden" />
             <span className="text-4xl md:text-6xl text-[#E89F95] align-middle px-4"> સંગ </span> 
             સૃષ્ટિ
           </h1>
 
-          <p className="text-lg md:text-2xl text-[#7D7D7D] mb-12 font-sans-gujarati max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-lg md:text-2xl text-white mb-12 font-sans-gujarati max-w-2xl mx-auto leading-relaxed px-4 drop-shadow-lg">
           પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત કરી રહ્યા છીએ...
           </p>
 
@@ -178,8 +189,8 @@ export default function App() {
               { label: 'સેકન્ડ', value: timeLeft.seconds }
             ].map((item, index) => (
               <div key={index} className="glass-card rounded-3xl p-4 md:p-8 flex flex-col items-center shadow-sm border-white/50">
-                <span className="font-serif-gujarati text-3xl md:text-6xl text-[#9CA986] font-bold mb-1">{item.value}</span>
-                <span className="text-[10px] md:text-sm text-[#7D7D7D] font-bold uppercase tracking-wider">{item.label}</span>
+                <span className="font-serif-gujarati text-3xl md:text-6xl text-[#ffffff] font-bold mb-1">{item.value}</span>
+                <span className="text-[10px] md:text-sm text-[#000000] font-bold uppercase tracking-wider">{item.label}</span>
               </div>
             ))}
           </div>
@@ -206,7 +217,7 @@ export default function App() {
             <p className="text-[#E89F95] italic text-xl">ના લગ્ન</p>
             <p>
               વાઘપુર નિવાસી <br className="hidden md:block"/>
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટિનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત</span> ની સુપુત્રી
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત</span> ની સુપુત્રી
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">સૃષ્ટિ</p>
             <p className="mt-12 pt-10 border-t border-[#F5F1EB]">
