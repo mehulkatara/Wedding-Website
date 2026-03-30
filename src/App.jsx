@@ -55,7 +55,7 @@ export default function App() {
       date: "8 મે, 2026",
       time: "સવારે 10:00 કલાકે",
       description: "દૂર-સૂદૂરથી પધારેલા વ્હાલા મહેમાનોનું ભાવભીનું સ્વાગત.",
-      image: "https://images.unsplash.com/photo-1773020933590-6928ed151150?w=600&h=320&fit=crop"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/guste.webp"
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ export default function App() {
       date: "9 મે, 2026",
       time: "સાંજે 5:00 કલાકે",
       description: "પરંપરાગત રાસ-ગરબાની ઉત્સાહી ઉજવણી.",
-      image: "https://images.unsplash.com/photo-1655462100517-7d65e7ece006?w=600&h=320&fit=crop"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/garba.webp"
     },
     {
       id: 5,
@@ -88,13 +88,13 @@ export default function App() {
     {
       side: "વર પક્ષ (લુસડિયા)",
       parents: "શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા",
-      phone: "+91 98765 43210",
+      phone: "+91 9879037998",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom_parents.webp"
     },
     {
       side: "કન્યા પક્ષ (વાઘપુર)",
       parents: "શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત",
-      phone: "+91 98765 43211",
+      phone: "+91 7984045642",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_parents.webp"
     }
   ];
@@ -190,7 +190,7 @@ export default function App() {
             ].map((item, index) => (
               <div key={index} className="glass-card rounded-3xl p-4 md:p-8 flex flex-col items-center shadow-sm border-white/50">
                 <span className="font-serif-gujarati text-3xl md:text-6xl text-[#ffffff] font-bold mb-1">{item.value}</span>
-                <span className="text-[10px] md:text-sm text-[#000000] font-bold uppercase tracking-wider">{item.label}</span>
+                <span className="text-[20px] md:text-3xl text-[#000000] font-bold uppercase tracking-wider">{item.label}</span>
               </div>
             ))}
           </div>
