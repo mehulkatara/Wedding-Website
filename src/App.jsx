@@ -36,42 +36,42 @@ export default function App() {
     {
       id: 1,
       title: "આભાર સ્તુતિ",
-      date: "7 મે, 2026",
-      time: "સાંજે 4:00 કલાકે",
+      date: "૭ મે, ૨૦૨૬",
+      time: "સાંજે ૪:૦૦ કલાકે",
       description: "ઈશ્વર પિતાનો આભાર માનવા માટે વિશેષ પ્રાર્થના સભા.",
-      image: "https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?w=600&h=320&fit=crop"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/abhar.jpeg"
     },
     {
       id: 2,
       title: "ગામના માંડવા",
-      date: "7 મે, 2026",
-      time: "સાંજે 6:00 કલાકે",
+      date: "૭ મે, ૨૦૨૬",
+      time: "સાંજે ૬:૦૦ કલાકે",
       description: "ગામના રીતિ-રિવાજ મુજબ માંડવા મુહૂર્ત અને પ્રીતિભોજન.",
-      image: "https://images.unsplash.com/photo-1744891471118-f74c0453cd21?w=600&h=320&fit=crop"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/mandap.jpeg"
     },
     {
       id: 3,
       title: "મહેમાનોનું સ્વાગત",
-      date: "8 મે, 2026",
-      time: "સવારે 10:00 કલાકે",
+      date: "૮ મે, ૨૦૨૬",
+      time: "સવારે ૧૦:૦૦ કલાકે",
       description: "દૂર-સૂદૂરથી પધારેલા વ્હાલા મહેમાનોનું ભાવભીનું સ્વાગત.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/guste.webp"
     },
     {
       id: 4,
       title: "રાસ ગરબા",
-      date: "9 મે, 2026",
-      time: "સાંજે 5:00 કલાકે",
+      date: "૮  મે, ૨૦૨૬",
+      time: "સાંજે ૫:૦૦ કલાકે",
       description: "પરંપરાગત રાસ-ગરબાની ઉત્સાહી ઉજવણી.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/garba.webp"
     },
     {
       id: 5,
       title: "લગ્ન વિધિ",
-      date: "11 મે, 2026",
-      time: "બપોરે 12:00 કલાકે",
+      date: "૧૧ મે, ૨૦૨૬",
+      time: "બપોરે ૧૨:૦૦ કલાકે",
       description: "C.N.I સંત યાકુબ ચર્ચ ખાતે પવિત્ર લગ્ન સંસ્કાર વિધિ.",
-      image: "https://images.pexels.com/photos/32195688/pexels-photo-32195688.jpeg?cs=srgb&dl=pexels-lilen-diaz-1025474869-32195688.jpg&fm=jpg&w=600&h=320"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/wedding.jpg"
     }
   ];
 
@@ -79,7 +79,7 @@ export default function App() {
     image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/Screenshot%202026-03-26%20003825-Hh4u3ByrCQBCjxfuzhTkk1M5oGwltW.png",
     titleOnImage: "C.N.I સંત યાકુબ ચર્ચ - વાઘપુર",
     description: "ઈશ્વર સમક્ષ પવિત્ર લગ્ન વિધિ અહીં યોજાશે.",
-    mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&output=embed",
+    mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&t=k&output=embed",
     mapsLink:
       "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!3m5!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"
   };
@@ -105,7 +105,7 @@ export default function App() {
       subtitle: "લુસડિયા",
       description: "વરનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom-home.webp",
-      mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&output=embed",
+      mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&t=k&output=embed",
       mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1MzUsOTQyODQ0ODEsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyNjI3MzMsMTAwNzk2MTg2QgJJTg%3D%3D&skid=969f89a4-0917-40f8-a0fb-0ba259923e7b&shorturl=1"
     },
     {
@@ -113,7 +113,7 @@ export default function App() {
       subtitle: "વાઘપુર",
       description: "કન્યાનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=320&fit=crop",
-      mapEmbed: "https://www.google.com/maps?q=23.695391,73.4360701&z=17&output=embed",
+      mapEmbed: "https://www.google.com/maps?q=23.695391,73.4360701&z=17&t=k&output=embed",
       mapsLink: "https://www.google.com/maps/place/23.666861,73.415263/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
     }
   ];
@@ -211,7 +211,7 @@ export default function App() {
           <div className="font-sans-gujarati text-lg md:text-2xl leading-[2] text-[#666666] space-y-8 px-4">
             <p>
               સહર્ષ જણાવવાનું કે ઈશ્વર પિતાની અસીમ કૃપાથી લુસડિયા નિવાસી <br className="hidden md:block"/>
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા</span> નો સુપુત્ર
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા</span> ના સુપુત્ર
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">રસીન</p>
             <p className="text-[#E89F95] italic text-xl">ના લગ્ન</p>
