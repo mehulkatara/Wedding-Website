@@ -114,7 +114,7 @@ export default function App() {
   ];
 
   const venue = {
-    image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/Screenshot%202026-03-26%20003825-Hh4u3ByrCQBCjxfuzhTkk1M5oGwltW.png",
+    image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/church.webp",
     titleOnImage: "C.N.I સંત યાકુબ ચર્ચ - વાઘપુર",
     description: "ઈશ્વર સમક્ષ પવિત્ર લગ્ન વિધિ અહીં યોજાશે.",
     mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&t=k&output=embed",
@@ -150,9 +150,9 @@ export default function App() {
       title: "કન્યાનું ઘર",
       subtitle: "વાઘપુર",
       description: "કન્યાનું પરિવાર અહીં નિવાસ કરે છે.",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=320&fit=crop",
-      mapEmbed: "https://www.google.com/maps?q=23.695391,73.4360701&z=17&t=k&output=embed",
-      mapsLink: "https://www.google.com/maps/place/23.666861,73.415263/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
+      image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_home.webp",
+      mapEmbed: "https://www.google.com/maps?q=23.666903,73.415208&z=17&t=k&output=embed",
+      mapsLink: "https://www.google.com/maps/place/23.666903,73.415208/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
     }
   ];
 
