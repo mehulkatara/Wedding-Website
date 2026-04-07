@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, MapPin, Phone, Heart, Gift, Clock, Music, Users, Star, ArrowRight, ChevronRight } from 'lucide-react';
+import { Calendar, MapPin, Phone, Heart, Gift, Clock, Music, Users, Star, ArrowRight, ChevronRight, Youtube } from 'lucide-react';
 
 export default function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -8,6 +8,8 @@ export default function App() {
     minutes: 0,
     seconds: 0
   });
+
+  const [subscriberCount, setSubscriberCount] = useState(null);
 
   // Countdown timer logic to May 11, 2026
   useEffect(() => {
@@ -30,6 +32,42 @@ export default function App() {
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  // Fetch YouTube subscriber count
+  useEffect(() => {
+    const fetchSubscriberCount = async () => {
+      try {
+        const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+        const handle = 'Rasin_Raja';
+
+        // First, search for the channel to get channel ID
+        const searchResponse = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&q=@${handle}&type=channel&key=${apiKey}`
+        );
+        const searchData = await searchResponse.json();
+
+        if (searchData.items && searchData.items.length > 0) {
+          const channelId = searchData.items[0].snippet.channelId;
+
+          // Now get channel statistics
+          const statsResponse = await fetch(
+            `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`
+          );
+          const statsData = await statsResponse.json();
+
+          if (statsData.items && statsData.items.length > 0) {
+            const count = parseInt(statsData.items[0].statistics.subscriberCount);
+            setSubscriberCount(count.toLocaleString()); // Format with commas
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching subscriber count:', error);
+        setSubscriberCount('N/A');
+      }
+    };
+
+    fetchSubscriberCount();
   }, []);
 
   const events = [
@@ -428,6 +466,28 @@ export default function App() {
             ભેટ સ્વરૂપે વાસણ, કપડાં કે દાગીના લાવવા નહીં.<br className="hidden md:block"/> 
             આપની પ્રત્યક્ષ હાજરી એ જ અમારા માટે મોટી ભેટ છે.
           </p>
+        </div>
+      </section>
+
+      {/* YouTube Subscribe Section */}
+      <section className="py-16 px-4 bg-[#E89F95] text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <a
+            href="https://www.youtube.com/@Rasin_Raja?sub_confirmation=1"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex flex-col items-center gap-4 bg-white text-[#E89F95] px-12 py-10 rounded-[40px] font-bold hover:bg-gray-100 transition-all shadow-lg"
+          >
+            <Youtube className="w-12 h-12" />
+            <div className="text-center">
+              <p className="text-sm font-serif-gujarati mb-2">Subscribe to</p>
+              <p className="text-3xl font-bold">@Rasin_Raja</p>
+              {subscriberCount && (
+                <p className="text-sm mt-3 opacity-75">Subscribers: {subscriberCount}</p>
+              )}
+            </div>
+            <ArrowRight className="w-6 h-6 mt-2" />
+          </a>
         </div>
       </section>
 
