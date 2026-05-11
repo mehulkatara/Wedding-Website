@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Phone, Heart, Gift, Clock, Music, Users, Star, ArrowRight, ChevronRight, Youtube } from 'lucide-react';
 
 export default function App() {
-  const [timeLeft, setTimeLeft] = useState({
+  const [timeElapsed, setTimeElapsed] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -11,16 +11,16 @@ export default function App() {
 
   const [subscriberCount, setSubscriberCount] = useState(null);
 
-  // Countdown timer logic to May 11, 2026
+  // Timer logic to show time elapsed since May 11, 2026
   useEffect(() => {
     const weddingDate = new Date('2026-05-11T12:00:00');
     
-    const calculateTimeLeft = () => {
+    const calculateTimeElapsed = () => {
       const now = new Date();
-      const difference = weddingDate.getTime() - now.getTime();
+      const difference = now.getTime() - weddingDate.getTime();
       
-      if (difference > 0) {
-        setTimeLeft({
+      if (difference >= 0) {
+        setTimeElapsed({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
@@ -29,8 +29,8 @@ export default function App() {
       }
     };
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+    calculateTimeElapsed();
+    const timer = setInterval(calculateTimeElapsed, 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -119,7 +119,7 @@ export default function App() {
     description: "ઈશ્વર સમક્ષ પવિત્ર લગ્ન વિધિ અહીં યોજાશે.",
     mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&t=k&output=embed",
     mapsLink:
-      "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!3m5!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!8m2!3d23.6678129!4d73.4112721!16s%2Fg%2F11h7_rvqsl!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"
+      "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m[...]
   };
 
   const families = [
@@ -144,7 +144,7 @@ export default function App() {
       description: "વરનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom-home.webp",
       mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&t=k&output=embed",
-      mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1MzUsOTQyODQ0ODEsOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyNjI3MzMsMTAwNzk2MTg2QgJJTg%3D%3D&skid=969f89a4-0917-40f8-a0fb-0ba259923e7b&shorturl=1"
+      mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1M[...]
     },
     {
       title: "કન્યાનું ઘર",
@@ -152,7 +152,7 @@ export default function App() {
       description: "કન્યાનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_home.webp",
       mapEmbed: "https://www.google.com/maps?q=23.666903,73.415208&z=17&t=k&output=embed",
-      mapsLink: "https://www.google.com/maps/place/23.666903,73.415208/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjExLjYYACD67A0qqAEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTU2MjEsMTAwNzk2NTM1LDk0Mjg0NDY5LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5OTI1MSwxMDA3OTYxODZCAklO&skid=2b16b311-d91e-40e1-a844-146cd95a6cb5"
+      mapsLink: "https://www.google.com/maps/place/23.666903,73.415208/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjEx[...]
     }
   ];
 
@@ -204,7 +204,7 @@ export default function App() {
         
         {/* Decorative Floating Blobs */}
         <div className="absolute top-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-[#9CA986] rounded-full mix-blend-multiply filter blur-[80px] opacity-10 animate-float"></div>
-        <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}[...]
 
         <div className="z-10 text-center animate-fade-up w-full max-w-4xl">
           
@@ -215,16 +215,16 @@ export default function App() {
           </h1>
 
           <p className="text-lg md:text-2xl text-white mb-12 font-sans-gujarati max-w-2xl mx-auto leading-relaxed px-4 drop-shadow-lg">
-          પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત કરી રહ્યા છીએ...
+          પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત[...]
           </p>
 
-          {/* Countdown Timer */}
-          <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto px-2">
+          {/* Time Elapsed Since Marriage */}
+          <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto px-2 mb-8">
             {[
-              { label: 'દિવસ', value: timeLeft.days },
-              { label: 'કલાક', value: timeLeft.hours },
-              { label: 'મિનિટ', value: timeLeft.minutes },
-              { label: 'સેકન્ડ', value: timeLeft.seconds }
+              { label: 'દિવસ', value: timeElapsed.days },
+              { label: 'કલાક', value: timeElapsed.hours },
+              { label: 'મિનિટ', value: timeElapsed.minutes },
+              { label: 'સેકન્ડ', value: timeElapsed.seconds }
             ].map((item, index) => (
               <div key={index} className="glass-card rounded-3xl p-4 md:p-8 flex flex-col items-center shadow-sm border-white/50">
                 <span className="font-serif-gujarati text-3xl md:text-6xl text-[#ffffff] font-bold mb-1">{item.value}</span>
@@ -232,6 +232,11 @@ export default function App() {
               </div>
             ))}
           </div>
+          
+          {/* Elapsed Time Label */}
+          <p className="text-white text-xl md:text-2xl font-sans-gujarati drop-shadow-lg">
+            લગ્ન પછી નો સમય
+          </p>
         </div>
       </section>
 
@@ -244,18 +249,18 @@ export default function App() {
             <div className="w-16 h-[1px] bg-[#E5E0D8] self-center"></div>
           </div>
 
-          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">પ્રભુના આશીર્વાદથી જોડાતી જીવનસફર</h2>
+          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">પ્રભુના આશીર્વાદથી જોડાતી જીવનસફર</h2[...]
           
           <div className="font-sans-gujarati text-lg md:text-2xl leading-[2] text-[#666666] space-y-8 px-4">
             <p>
-              સહર્ષ જણાવવાનું કે ઈશ્વર પિતાની અસીમ કૃપાથી લુસડિયા નિવાસી <br className="hidden md:block"/>
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા</span> ના સુપુત્ર
+              સહર્ષ જણાવવાનું કે ઈશ્વર પિતાની અસીમ કૃપાથી લુસડિયા નિવાસી <br className="hidden [...]
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેર[...]
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">રસીન</p>
             <p className="text-[#E89F95] italic text-xl">ના લગ્ન</p>
             <p>
               વાઘપુર નિવાસી <br className="hidden md:block"/>
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત</span> ની સુપુત્રી
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વર[...]
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">સૃષ્ટિ</p>
             <p className="mt-12 pt-10 border-t border-[#F5F1EB]">
@@ -447,7 +452,7 @@ export default function App() {
           <div className="bg-white p-12 rounded-[50px] shadow-sm text-center border border-[#E5E0D8]">
             <p className="text-[#E89F95] font-bold text-sm tracking-widest mb-10 uppercase">નિમંત્રક / સ્નેહાધીન</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
-              {["ફિલિસ આર. સુવેરા", "સેવિના એમ. કટારા", "મેહુલકુમાર કટારા", "ઇવાન્યા કટારા", "ઇર્વેન કટારા", "સમસ્ત પરિવાર"].map((name, i) => (
+              {["ફિલિસ આર. સુવેરા", "સેવિના એમ. કટારા", "મેહુલકુમાર કટારા", "ઇવાન્યા કટાર"][...]
                 <div key={i} className="font-serif-gujarati text-lg md:text-xl text-[#4A4A4A] font-bold">
                   {name}
                 </div>
