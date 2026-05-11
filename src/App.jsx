@@ -118,8 +118,7 @@ export default function App() {
     titleOnImage: "C.N.I સંત યાકુબ ચર્ચ - વાઘપુર",
     description: "ઈશ્વર સમક્ષ પવિત્ર લગ્ન વિધિ અહીં યોજાશે.",
     mapEmbed: "https://www.google.com/maps?q=23.6678129%2C73.4112721&z=17&t=k&output=embed",
-    mapsLink:
-      "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m[...]
+    mapsLink: "https://www.google.com/maps/place/C.N.I+St.+James+Church,+Vaghpur/@23.6676699,73.4117187,17z/data=!4m14!1m7!3m6!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!2sC.N.I+St.+James+Church,+Vaghpur!8m2!3d23.667525!4d73.4121711!16s%2Fm%2F04z01h2!3m5!1s0x395d8ba107a4b0b1:0x5f3a1d21bf74a7f1!8m2!3d23.667525!4d73.4121711!16s%2Fm%2F04z01h2?entry=ttu"
   };
 
   const families = [
@@ -144,7 +143,7 @@ export default function App() {
       description: "વરનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/groom-home.webp",
       mapEmbed: "https://www.google.com/maps?q=23.695391,73.438645&z=17&t=k&output=embed",
-      mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps&g_ep=CAESBzI2LjEyLjUYACCenQoqpgEsOTQyNTk1NTEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc1NywxMDA3OTY1M[...]
+      mapsLink: "https://www.google.com/maps?q=23.695391,73.438645&entry=gps"
     },
     {
       title: "કન્યાનું ઘર",
@@ -152,7 +151,7 @@ export default function App() {
       description: "કન્યાનું પરિવાર અહીં નિવાસ કરે છે.",
       image: "https://8pabeskigkdlhl8c.public.blob.vercel-storage.com/bride_home.webp",
       mapEmbed: "https://www.google.com/maps?q=23.666903,73.415208&z=17&t=k&output=embed",
-      mapsLink: "https://www.google.com/maps/place/23.666903,73.415208/data=!4m6!3m5!1s0!7e2!8m2!3d23.6668611!4d73.41526329999999!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjEx[...]
+      mapsLink: "https://www.google.com/maps/place/23.666903,73.415208"
     }
   ];
 
@@ -204,7 +203,7 @@ export default function App() {
         
         {/* Decorative Floating Blobs */}
         <div className="absolute top-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-[#9CA986] rounded-full mix-blend-multiply filter blur-[80px] opacity-10 animate-float"></div>
-        <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}[...]
+        <div className="absolute bottom-[-5%] left-[-5%] w-[30vw] h-[30vw] bg-[#E89F95] rounded-full mix-blend-multiply filter blur-[60px] opacity-10 animate-float" style={{animationDelay: '1s'}}></div>
 
         <div className="z-10 text-center animate-fade-up w-full max-w-4xl">
           
@@ -215,7 +214,7 @@ export default function App() {
           </h1>
 
           <p className="text-lg md:text-2xl text-white mb-12 font-sans-gujarati max-w-2xl mx-auto leading-relaxed px-4 drop-shadow-lg">
-          પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત[...]
+          પ્રેમ અને સ્નેહના પવિત્ર બંધનમાં બંધાઈ, અમે જીવનના નવા અધ્યાયની શરૂઆત કરી રહ્યા છીએ.
           </p>
 
           {/* Time Elapsed Since Marriage */}
@@ -249,18 +248,18 @@ export default function App() {
             <div className="w-16 h-[1px] bg-[#E5E0D8] self-center"></div>
           </div>
 
-          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">પ્રભુના આશીર્વાદથી જોડાતી જીવનસફર</h2[...]
+          <h2 className="font-serif-gujarati text-3xl md:text-5xl text-[#4A4A4A] mb-12 font-bold">પ્રભુના આશીર્વાદથી જોડાતી જીવનસફર</h2>
           
           <div className="font-sans-gujarati text-lg md:text-2xl leading-[2] text-[#666666] space-y-8 px-4">
             <p>
-              સહર્ષ જણાવવાનું કે ઈશ્વર પિતાની અસીમ કૃપાથી લુસડિયા નિવાસી <br className="hidden [...]
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેર[...]
+              સહર્ષ જણાવવાનું કે ઈશ્વર પિતાની અસીમ કૃપાથી લુસડિયા નિવાસી <br className="hidden md:block"/>
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી ભારતીબેન તથા શ્રી રેઉએલભાઈ તિમોથીભાઈ સુવેરા</span>
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">રસીન</p>
             <p className="text-[#E89F95] italic text-xl">ના લગ્ન</p>
             <p>
               વાઘપુર નિવાસી <br className="hidden md:block"/>
-              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વર[...]
+              <span className="text-[#4A4A4A] font-bold">શ્રીમતી વોલેન્ટીનાબેન તથા શ્રી હેમંતસન વાલજીભાઈ વરસાત</span>
             </p>
             <p className="text-4xl md:text-6xl text-[#9CA986] font-serif-gujarati font-black py-4">સૃષ્ટિ</p>
             <p className="mt-12 pt-10 border-t border-[#F5F1EB]">
@@ -452,7 +451,7 @@ export default function App() {
           <div className="bg-white p-12 rounded-[50px] shadow-sm text-center border border-[#E5E0D8]">
             <p className="text-[#E89F95] font-bold text-sm tracking-widest mb-10 uppercase">નિમંત્રક / સ્નેહાધીન</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
-              {["ફિલિસ આર. સુવેરા", "સેવિના એમ. કટારા", "મેહુલકુમાર કટારા", "ઇવાન્યા કટાર"][...]
+              {["ફિલિસ આર. સુવેરા", "સેવિના એમ. કટારા", "મેહુલકુમાર કટારા", "ઇવાન્યા કટારા"].map((name, i) => (
                 <div key={i} className="font-serif-gujarati text-lg md:text-xl text-[#4A4A4A] font-bold">
                   {name}
                 </div>
